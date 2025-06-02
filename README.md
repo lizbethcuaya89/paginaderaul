@@ -1,58 +1,135 @@
-# paginaderaul
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Página de Raúl</title>
     <style>
         body {
-            background-color: black;
+            background-image: url('neuronas.png'); /* Reemplázalo con la ruta o URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Calibri';
             margin: 0;
             padding: 0;
-        }
-        .nav {
             display: flex;
-            justify-content: flex-end;
-            background-color: #222;
-            padding: 15px;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        .nav a {
+
+        .menu {
+            position: absolute;
+            display: flex;
+        }
+
+        .left-tab {
+            top: 10px;
+            left: 10px;
+        }
+
+        .right-tabs {
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tab {
+            background-color: rgba(255, 255, 255, 0); /* Transparente sin bordes */
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
         }
+
+        .tab:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
         .container {
             display: flex;
+            width: 100%;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column {
             padding: 20px;
         }
-        .column {
-            flex: 1;
-            padding: 20px;
-            border: 1px solid white;
+
+        .left-column {
+            width: 40%;
+            text-align: center;
+        }
+
+        .left-column img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .right-column {
+            width: 60%;
+        }
+
+        .right-column p {
+            font-size: 18px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .icons img {
+            width: 30px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Acerca de</a>
-        <a href="#">Contacto</a>
-    </nav>
+    <div class="menu left-tab">
+        <div class="tab">INICIO</div>
+    </div>
+    <div class="menu right-tabs">
+        <div class="tab">Sobre mí</div>
+        <div class="tab">Publicaciones</div>
+        <div class="tab">Proyectos</div>
+        <div class="tab">Contacto</div>
+        <img src="imagen.jpg" alt="Imagen en la barra" style="width: 40px; margin-left: 10px;">
+    </div>
 
     <div class="container">
-        <div class="column">
-            <h2>Columna 1</h2>
-            <p>Contenido de la primera columna.</p>
+        <div class="column left-column">
+            <img src="cerebros.png" alt="Imagen relacionada">
         </div>
-        <div class="column">
-            <h2>Columna 2</h2>
-            <p>Contenido de la segunda columna.</p>
+        <div class="column right-column">
+            <p>Soy psicólogo, maestro en Ciencias en el Instituto de Neurobiología de la Universidad Nacional Autónoma de México (UNAM). Doctor en Ciencias Biomédicas en el Instituto de Nuerobiología de la UNAM. Investigador postdoctoral del Departamento de Etología en la Universidad Eötvös Loránd en Budapest, Hungría. Actualmente investigador postdoctoral en la Universidad de Viena en Austria.
+
+Gran parte de mi trabajo utiliza resonancia magnética funcional para investigar como la estimulación sensorial se representa en los cerebros de humanos y perros. Especializado en el área de la cognición, mi investigación se centra en explorar los mecanismos neuronales que subyacen a la notable cognición social de los perros que viven en casas, con objeto de estudiar las raíces sociales y cognitivas en la relación perro-humano, y a partir de ello, tratar de inferir cómi  se ha desarrollado la evolución de la comunicación y la cooperación.
+
+Las líneas de investigación que más me interesan son la cognición animal, la toma de decisiones y la interacción entre humanos e inteligencia artificial.</p>
         </div>
     </div>
+
+    <footer>
+        <div class="text">Todo el mundo sabe que los perros son geniales. ¡Creo que su cerebro también lo es! Exploro su funcionamiento cerebral mediante resonancia magnética funcional.</div>
+        <div class="icons">
+            <img src="logo border.png" alt="Perro">
+            <img src="youtube.png" alt="Youtube">
+            <img src="whatsapp.png" alt="WappsApp">
+            <img src="facebook.png" alt="FaceBook">
+        </div>
+    </footer>
 </body>
 </html>
